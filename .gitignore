@@ -1,0 +1,9 @@
+# Local tooling / private — not part of the site
+.claude/
+.remember/
+.vercel/
+node_modules/
+.DS_Store
+
+# Original Claude Design source bundle (not deployed)
+*.zip

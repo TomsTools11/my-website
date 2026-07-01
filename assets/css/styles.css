@@ -1,0 +1,56 @@
+/* tom-panos.com — shared styles (ported from Claude Design prototypes) */
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#0B0C10;color:#F3F5F8;font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+::selection{background:rgba(92,155,232,.32);}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;}
+input{font-family:'Geist',system-ui,sans-serif;}
+input::placeholder{color:#5C6470;}
+@keyframes floatA{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(40px,-30px) scale(1.08);}}
+@keyframes floatB{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,40px) scale(1.12);}}
+@keyframes spinRing{to{transform:rotate(360deg);}}
+@keyframes marqueeDrift{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* hover states (converted from prototype style-hover attributes) */
+.hv1:hover{color:#F3F5F8 !important}
+.hv2:hover{transform:translateY(-1px) !important;box-shadow:0 8px 24px rgba(64,126,201,.4) !important}
+.hv3:hover{transform:translateY(-2px) !important;box-shadow:0 14px 34px rgba(64,126,201,.38) !important}
+.hv4:hover{background:rgba(255,255,255,.09) !important;border-color:rgba(255,255,255,.28) !important}
+.hv5:hover{transform:translateX(4px) !important;border-color:rgba(92,155,232,.4) !important;background:rgba(92,155,232,.05) !important}
+.hv6:hover{transform:translateY(-3px) !important;border-color:rgba(92,155,232,.4) !important;background:rgba(92,155,232,.06) !important}
+.hv7:hover{gap:12px !important}
+.hv8:hover{color:#C3CAD3 !important}
+.hv9:hover{transform:translateY(-5px) !important;border-color:rgba(92,155,232,.4) !important}
+.hv10:hover{transform:translateY(-2px) !important;box-shadow:0 16px 38px rgba(64,126,201,.4) !important}
+.hv11:hover{color:#fff !important}
+.hv12:hover{transform:translateY(-1px) !important;box-shadow:0 10px 28px rgba(64,126,201,.38) !important}
+.hv13:hover{transform:translateY(-4px) !important;border-color:rgba(92,155,232,.4) !important;background:rgba(92,155,232,.05) !important}
+.hv14:hover{border-color:rgba(92,155,232,.4) !important}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  [style*="grid-template-columns:1.15fr"],
+  [style*="grid-template-columns:.9fr 1.1fr"],
+  [style*="grid-template-columns:1.1fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr) !important;}
+  [style*="grid-template-columns:repeat(3"]{grid-template-columns:repeat(2,1fr) !important;}
+  [style*="grid-template-columns:repeat(6"]{grid-template-columns:repeat(3,1fr) !important;}
+}
+@media (max-width:760px){
+  nav{flex-wrap:wrap !important;gap:10px !important;padding:12px 18px !important;}
+  nav>div{gap:16px !important;flex-wrap:wrap;justify-content:flex-end;row-gap:8px;}
+  section[style*="padding:172px"],section[style*="padding:188px"]{padding-top:148px !important;}
+}
+@media (max-width:620px){
+  [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns:repeat(2"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:repeat(6"]{grid-template-columns:repeat(2,1fr) !important;}
+  [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr) !important;}
+  h1{font-size:40px !important;line-height:1.06 !important;letter-spacing:-1px !important;}
+  h2{font-size:28px !important;}
+  section{padding-left:20px !important;padding-right:20px !important;}
+  nav{padding:12px 16px !important;}
+  nav>div{gap:13px !important;font-size:13px;}
+}

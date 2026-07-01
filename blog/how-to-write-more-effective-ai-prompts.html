@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Write More Effective AI Prompts — Tom Panos</title>
+<meta name="description" content="This article provides essential tips and techniques for writing effective prompts to enhance your interactions with AI tools like ChatGPT, ensuring quality outputs through thoughtful prompt engineering.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Write More Effective AI Prompts">
+<meta property="og:description" content="This article provides essential tips and techniques for writing effective prompts to enhance your interactions with AI tools like ChatGPT, ensuring quality outputs through thoughtful prompt engineering.">
+<meta property="og:site_name" content="Tom Panos">
+<meta property="og:url" content="https://tom-panos.com/blog/how-to-write-more-effective-ai-prompts">
+<meta property="og:image" content="https://tom-panos.com/assets/img/avatar.png">
+<meta property="article:published_time" content="2024-03-14">
+<meta property="article:author" content="Tom Panos">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/logo-tompanos-v3.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Geist:wght@300;400;500;600&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<div style="position:relative;width:100%;min-height:100vh;">
+  <div style="position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;">
+    <div style="position:absolute;top:-12%;left:6%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(64,126,201,.30),transparent 68%);filter:blur(30px);animation:floatA 16s ease-in-out infinite;"></div>
+    <div style="position:absolute;top:0;right:2%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(92,155,232,.24),transparent 68%);filter:blur(30px);animation:floatB 19s ease-in-out infinite;"></div>
+  </div>
+
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:rgba(11,12,16,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);">
+    <a href="/" style="display:flex;align-items:center;gap:11px;font-family:'Red Hat Display';font-weight:800;font-size:19px;letter-spacing:-.5px;"><img src="/assets/img/logo-tompanos-v3.png" alt="Tom Panos" style="height:30px;width:auto;display:block;"></a>
+    <div style="display:flex;align-items:center;gap:30px;">
+      <a href="/" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">Home</a>
+      <a href="/projects" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">My Projects</a>
+      <a href="/mission" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">My Mission</a>
+      <a href="/library" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">Software Library</a>
+      <a href="/blog" style="font-size:14.5px;color:#F3F5F8;font-weight:500;">My Blog</a>
+      <a href="https://s3labs.tech" target="_blank" style="font-size:14px;font-weight:600;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);padding:9px 18px;border-radius:10px;" class="hv2">S3 Labs <span style="font-family:'Fira Code';">↗</span></a>
+    </div>
+  </nav>
+
+  <div style="position:relative;z-index:1;">
+
+    <!-- ARTICLE HEADER -->
+    <section style="max-width:900px;margin:0 auto;padding:168px 32px 36px;">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);">
+        <a href="/blog" class="hv7" style="display:inline-flex;align-items:center;gap:8px;font-family:'Fira Code';font-size:12.5px;letter-spacing:.5px;color:#5C9BE8;transition:gap .2s;">← The blog</a>
+        <div style="margin-top:22px;"><span style="font-family:'Fira Code';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#5C9BE8;">Artificial Intelligence</span></div>
+        <h1 style="font-family:'Red Hat Display';font-weight:900;font-size:48px;line-height:1.08;letter-spacing:-1.6px;margin:14px 0 18px;">How to Write More Effective AI Prompts</h1>
+        <p style="font-size:18px;line-height:1.65;color:#B6BDC7;margin:0 0 22px;max-width:760px;">This article provides essential tips and techniques for writing effective prompts to enhance your interactions with AI tools like ChatGPT, ensuring quality outputs through thoughtful prompt engineering.</p>
+        <span style="font-family:'Fira Code';font-size:12.5px;color:#7B8693;">Mar 14, 2024 · 3 min read · Tom Panos</span>
+      </div>
+    </section>
+
+    <!-- COVER -->
+    <section style="max-width:900px;margin:0 auto;padding:0 32px 44px;">
+      <div data-reveal data-reveal-delay="80" style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);">
+        <img src="/assets/img/blog/ai-prompts-cover.svg" alt="Cover illustration for How to Write More Effective AI Prompts" style="width:100%;border-radius:22px;border:1px solid rgba(255,255,255,.08);display:block;">
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section style="max-width:900px;margin:0 auto;padding:0 32px 40px;">
+      <article class="post-body">
+        <h2>The Art of Prompt Engineering for ChatGPT</h2>
+        <p>In an AI-driven era, mastering communication with tools like ChatGPT is crucial. This guide explores writing effective prompts for ChatGPT, unlocking its full potential. Whether you’re a tech enthusiast, content creator, or business professional, these tips enhance your AI interaction.</p>
+
+        <h3>The GIGO Principle: Quality In, Quality Out</h3>
+        <p>The axiom "Garbage In, Garbage Out" (GIGO) holds true in the world of AI. The quality of the output you receive from ChatGPT directly correlates with the quality of the prompts you provide. Inadequate prompts can lead to misleading or irrelevant answers, while well-crafted ones can produce insightful and accurate responses.</p>
+
+        <h3>Crafting Prompts that Spark Excellence</h3>
+        <p>The skill of writing effective prompts is now so crucial that it has spawned a new discipline: prompt engineering. This involves meticulously designing prompts that guide ChatGPT’s large language model (LLM) to generate the best possible answers.</p>
+
+        <h3>Conversational AI: Talk to ChatGPT Like a Person</h3>
+        <p>Interacting with ChatGPT should mimic a conversation with a colleague. This approach helps in setting the stage, providing context, and maintaining the AI’s focus on the topic.</p>
+
+        <h3>Context Is Key</h3>
+        <p>Providing ChatGPT with clear context is vital. It narrows down the AI’s focus to your specific subject, leading to more accurate and useful responses. Contextualized prompts require more details but offer more refined outputs.</p>
+
+        <h3>Assuming Identities and Professions</h3>
+        <p>One of ChatGPT’s fascinating features is its ability to adopt different personas or professional perspectives. This ability can be harnessed to gain diverse viewpoints on a topic.</p>
+
+        <h3>Maintaining Relevance and Accuracy</h3>
+        <p>While ChatGPT is an advanced AI, it can sometimes veer off-topic or produce fabricated answers. To mitigate this, ask the AI to justify its responses and guide it gently back on track. Remember to prompt it for source citations where necessary.</p>
+
+        <hr>
+
+        <h2>Advanced Prompt-Writing Techniques</h2>
+
+        <h3>Fine-Tuning Your Prompts</h3>
+        <p>Minor adjustments to your prompts can lead to significantly different responses from ChatGPT. Remember, the AI retains its awareness of previous conversations as long as the session is ongoing.</p>
+
+        <h3>Breaking Down Responses</h3>
+        <p>Be mindful that responses over 500 words can sometimes lose coherence. Keep your prompts concise and to the point for the best results.</p>
+
+        <h3>Evolving Your Questions</h3>
+        <p>If ChatGPT seems hesitant to answer a question, rephrasing it might yield better results. Utilize personas to elicit responses that might not be forthcoming otherwise.</p>
+
+        <h3>Seeking Justification and Sources</h3>
+        <p>When looking for well-supported answers, instruct ChatGPT to justify its responses or provide sources. This practice ensures a higher degree of accuracy and reliability in the information provided.</p>
+
+        <h3>Embrace Experimentation</h3>
+        <p>Experimentation is key in mastering prompt writing. The more you test different approaches, the better you’ll understand how to steer ChatGPT towards desired outcomes.</p>
+
+        <h3>ChatGPT Plus: Taking It a Step Further</h3>
+        <p>For those seeking an enhanced experience, consider the ChatGPT Plus subscription. It offers additional features and capabilities, further refining your interaction with the AI.</p>
+
+        <hr>
+
+        <h2>Conclusion: The Journey to AI Mastery</h2>
+        <p>Mastering ChatGPT prompts is a journey of continuous learning and adaptation. By understanding the intricacies of prompt engineering and staying updated with the latest advancements, you can transform your interaction with AI from a mere task to an enriching experience. Embrace these tips, keep experimenting, and watch as ChatGPT becomes an invaluable asset in your digital toolkit.</p>
+      </article>
+    </section>
+
+    <!-- BACK TO BLOG -->
+    <section style="max-width:900px;margin:0 auto;padding:0 32px 90px;">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);border-top:1px solid rgba(255,255,255,.08);padding-top:36px;">
+        <a href="/blog" style="display:inline-block;font-size:14px;font-weight:600;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);padding:11px 22px;border-radius:10px;" class="hv2">← Back to all articles</a>
+      </div>
+    </section>
+
+    <footer style="border-top:1px solid rgba(255,255,255,.07);background:#0A0B0E;">
+      <div style="max-width:1180px;margin:0 auto;padding:36px 32px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
+        <a href="/" style="display:flex;align-items:center;gap:11px;font-family:'Red Hat Display';font-weight:800;font-size:18px;letter-spacing:-.5px;"><img src="/assets/img/logo-tompanos-v3.png" alt="Tom Panos" style="height:30px;width:auto;display:block;"></a>
+        <p style="font-size:13px;color:#5C6470;font-family:'Fira Code';margin:0;">© 2026 Tom Panos · Made with ♥ in Milwaukee, WI</p>
+      </div>
+    </footer>
+
+  </div>
+</div>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

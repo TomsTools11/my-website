@@ -45,7 +45,7 @@
       function apply() {
         var visible = 0;
         cards.forEach(function (c) {
-          var okCat = cat === 'All' || c.getAttribute('data-cat') === cat;
+          var okCat = cat === 'All' || (c.getAttribute('data-cat') || '').split(',').indexOf(cat) !== -1;
           var okQ = !q || (c.getAttribute('data-name') || '').indexOf(q) !== -1;
           var show = okCat && okQ;
           c.style.display = show ? 'flex' : 'none';

@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "tomstools-mods": {
+      "source": { "source": "github", "repo": "TomsTools11/claude-command-center" }
+    }
+  },
+  "enabledPlugins": {
+    "command-center@tomstools-mods": true
+  }
+}

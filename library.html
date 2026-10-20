@@ -36,19 +36,20 @@
       <a href="/blog" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">My Blog</a>
       <a href="https://s3labs.tech" target="_blank" style="font-size:14px;font-weight:600;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);padding:9px 18px;border-radius:10px;" class="hv2">S3 Labs <span style="font-family:'Fira Code';">↗</span></a>
     </div>
+    <button type="button" data-navtoggle aria-label="Menu" aria-expanded="false" style="display:none;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#F3F5F8;cursor:pointer;padding:0;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 4.5h14M2 9h14M2 13.5h14"/></svg></button>
   </nav>
 
   <div style="position:relative;z-index:1;">
 
     <!-- HERO -->
     <section style="max-width:900px;margin:0 auto;padding:188px 32px 40px;text-align:center;">
-      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);display:inline-block;font-family:'Fira Code';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#5C9BE8;border:1px solid rgba(92,155,232,.28);background:rgba(92,155,232,.07);padding:7px 13px;border-radius:100px;margin-bottom:24px;">Software Library</div>
-      <h1 data-reveal data-reveal-delay="80" style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);font-family:'Red Hat Display';font-weight:900;font-size:54px;line-height:1.05;letter-spacing:-1.8px;margin:0 0 20px;">Find high-value software.<br/><span style="background:linear-gradient(100deg,#5C9BE8,#2E6BB0);-webkit-background-clip:text;background-clip:text;color:transparent;">Keep your wallet closed.</span></h1>
-      <p data-reveal data-reveal-delay="160" style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);font-size:18px;line-height:1.6;color:#B6BDC7;max-width:600px;margin:0 auto 30px;">A curated library of the best free and low-cost tools in marketing, sales, productivity, design, and AI.</p>
-      <div data-reveal data-reveal-delay="220" style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;gap:12px;max-width:520px;margin:0 auto;">
-        <div style="flex:1;display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:13px;padding:13px 16px;">
-          <span style="color:#5C6470;font-size:16px;">⌕</span>
-          <input data-search type="text" placeholder="Search the library…" style="flex:1;background:transparent;border:none;outline:none;color:#F3F5F8;font-size:15px;" />
+      <div style="animation:heroIn .7s cubic-bezier(.2,.7,.2,1) 0ms both;display:inline-block;font-family:'Fira Code';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#5C9BE8;border:1px solid rgba(92,155,232,.28);background:rgba(92,155,232,.07);padding:7px 13px;border-radius:100px;margin-bottom:24px;">Software Library</div>
+      <h1 style="animation:heroIn .7s cubic-bezier(.2,.7,.2,1) 80ms both;font-family:'Red Hat Display';font-weight:900;font-size:54px;line-height:1.05;letter-spacing:-1.8px;margin:0 0 20px;">Find high-value software.<br/><span style="background:linear-gradient(100deg,#5C9BE8,#2E6BB0);-webkit-background-clip:text;background-clip:text;color:transparent;">Keep your wallet closed.</span></h1>
+      <p style="animation:heroIn .7s cubic-bezier(.2,.7,.2,1) 160ms both;font-size:18px;line-height:1.6;color:#B6BDC7;max-width:600px;margin:0 auto 30px;">A curated library of the best free and low-cost tools in marketing, sales, productivity, design, and AI.</p>
+      <div style="animation:heroIn .7s cubic-bezier(.2,.7,.2,1) 220ms both;display:flex;align-items:center;gap:12px;max-width:520px;margin:0 auto;">
+        <div style="flex:1;min-width:0;display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:13px;padding:13px 16px;">
+          <span style="color:#7B8693;font-size:16px;">⌕</span>
+          <input data-search type="text" placeholder="Search the library…" style="flex:1;min-width:0;background:transparent;border:none;outline:none;color:#F3F5F8;font-size:15px;" />
         </div>
         <a href="mailto:tom@tom-panos.com" style="flex:none;font-weight:600;font-size:14.5px;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);padding:14px 22px;border-radius:13px;white-space:nowrap;" class="hv12">Submit an app</a>
       </div>
@@ -61,7 +62,6 @@
           <button data-filter="All" style="cursor:pointer;font-family:'Fira Code';font-size:12.5px;letter-spacing:.5px;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);border:1px solid transparent;padding:8px 15px;border-radius:9px;">All</button>
           <button data-filter="AI" style="cursor:pointer;font-family:'Fira Code';font-size:12.5px;letter-spacing:.5px;color:#9BA3AD;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:8px 15px;border-radius:9px;">AI</button>
           <button data-filter="Productivity" style="cursor:pointer;font-family:'Fira Code';font-size:12.5px;letter-spacing:.5px;color:#9BA3AD;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:8px 15px;border-radius:9px;">Productivity</button>
-          <button data-filter="Design" style="cursor:pointer;font-family:'Fira Code';font-size:12.5px;letter-spacing:.5px;color:#9BA3AD;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:8px 15px;border-radius:9px;">Design</button>
           <button data-filter="Dev" style="cursor:pointer;font-family:'Fira Code';font-size:12.5px;letter-spacing:.5px;color:#9BA3AD;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:8px 15px;border-radius:9px;">Dev</button>
         </div>
       </div>
@@ -77,7 +77,7 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Claude</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">claude.ai</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">My daily driver for writing, reasoning, and building.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">AI</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">AI</span>
           </a>
         
           <a href="https://claude.ai/code" target="_blank" data-card data-cat="Dev" data-name="claude code dev" data-reveal data-reveal-delay="80" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
@@ -89,19 +89,19 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Claude Code</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">claude.ai/code</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">Agentic coding in the terminal — builds and ships with you.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">Dev</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">Dev</span>
           </a>
         
           <a href="https://raycast.com" target="_blank" data-card data-cat="Productivity" data-name="raycast productivity" data-reveal data-reveal-delay="160" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
               <span style="display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:#fff;flex:none;overflow:hidden;"><img src="assets/img/lib/Raycast.png" alt="Raycast" style="width:32px;height:32px;object-fit:contain;display:block;" /></span>
               
-              <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#7FB4F0;border:1px solid rgba(127,180,240,.4);padding:4px 9px;border-radius:7px;">Free</span>
+              <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#5C9BE8;border:1px solid rgba(92,155,232,.4);padding:4px 9px;border-radius:7px;">Freemium</span>
             </div>
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Raycast</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">raycast.com</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">Spotlight on superpowers — launch, automate, and search.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">Productivity</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">Productivity</span>
           </a>
         
           <a href="https://manus.im" target="_blank" data-card data-cat="AI" data-name="manus ai ai" data-reveal data-reveal-delay="0" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
@@ -113,7 +113,7 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Manus AI</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">manus.im</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">A general AI agent that plans and executes multi-step tasks.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">AI</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">AI</span>
           </a>
         
           <a href="https://smithery.ai" target="_blank" data-card data-cat="Dev" data-name="smithery dev" data-reveal data-reveal-delay="80" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
@@ -125,7 +125,7 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Smithery</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">smithery.ai</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">Your agent’s gateway — 2,000+ MCP tools, one command.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">Dev</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">Dev</span>
           </a>
         
           <a href="https://superhuman.com" target="_blank" data-card data-cat="Productivity" data-name="superhuman productivity" data-reveal data-reveal-delay="160" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
@@ -137,7 +137,7 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Superhuman</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">superhuman.com</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">The fastest email experience ever made — fly through your inbox.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">Productivity</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">Productivity</span>
           </a>
         
           <a href="https://gemini.google.com" target="_blank" data-card data-cat="AI" data-name="google gemini ai" data-reveal data-reveal-delay="0" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
@@ -149,7 +149,7 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Google Gemini</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">gemini.google.com</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">Google's multimodal AI for reasoning, research, and writing.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">AI</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">AI</span>
           </a>
         
           <a href="https://bear.app" target="_blank" data-card data-cat="Productivity" data-name="bear productivity" data-reveal data-reveal-delay="80" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
@@ -161,19 +161,19 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Bear</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">bear.app</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">A fast, beautiful Markdown notes app for Apple devices.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">Productivity</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">Productivity</span>
           </a>
         
-          <a href="https://netlify.com" target="_blank" data-card data-cat="Design" data-name="netlify design" data-reveal data-reveal-delay="160" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
+          <a href="https://netlify.com" target="_blank" data-card data-cat="Dev" data-name="netlify dev" data-reveal data-reveal-delay="160" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
               <span style="display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:#fff;flex:none;overflow:hidden;"><img src="assets/img/lib/Netlify.png" alt="Netlify" style="width:32px;height:32px;object-fit:contain;display:block;" /></span>
               
-              <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#7FB4F0;border:1px solid rgba(127,180,240,.4);padding:4px 9px;border-radius:7px;">Free</span>
+              <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#5C9BE8;border:1px solid rgba(92,155,232,.4);padding:4px 9px;border-radius:7px;">Freemium</span>
             </div>
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Netlify</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">netlify.com</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">Ship and host front-end projects with zero config.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">Design</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">Dev</span>
           </a>
         
           <a href="https://vercel.com" target="_blank" data-card data-cat="Dev" data-name="vercel dev" data-reveal data-reveal-delay="0" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
@@ -185,7 +185,7 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Vercel</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">vercel.com</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">Deploy front-end apps to a global edge network — zero config.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">Dev</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">Dev</span>
           </a>
         
           <a href="https://notebooklm.google" target="_blank" data-card data-cat="AI" data-name="notebooklm ai" data-reveal data-reveal-delay="80" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
@@ -197,10 +197,10 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">NotebookLM</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">notebooklm.google</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">Turn your sources into grounded notes, summaries, and audio.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">AI</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">AI</span>
           </a>
         
-          <a href="https://workspace.google.com" target="_blank" data-card data-cat="Design" data-name="google workspace design" data-reveal data-reveal-delay="160" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
+          <a href="https://workspace.google.com" target="_blank" data-card data-cat="Productivity" data-name="google workspace productivity" data-reveal data-reveal-delay="160" style="opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;background:rgba(255,255,255,.02);" class="hv13">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
               <span style="display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:#fff;flex:none;overflow:hidden;"><img src="assets/img/lib/Google_Workspace.png" alt="Google Workspace" style="width:32px;height:32px;object-fit:contain;display:block;" /></span>
               
@@ -209,7 +209,7 @@
             <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;margin:0 0 4px;">Google Workspace</h3>
             <span style="font-family:'Fira Code';font-size:12px;color:#5C9BE8;margin-bottom:12px;">workspace.google.com</span>
             <p style="font-size:13.5px;line-height:1.5;color:#9BA3AD;margin:0;flex:1;">Docs, Sheets, and Slides — now with Gemini built in.</p>
-            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#6A7280;margin-top:16px;">Design</span>
+            <span style="font-family:'Fira Code';font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:#8C95A1;margin-top:16px;">Productivity</span>
           </a>
         
       </div>
@@ -219,7 +219,7 @@
     <footer style="border-top:1px solid rgba(255,255,255,.07);background:#0A0B0E;">
       <div style="max-width:1180px;margin:0 auto;padding:36px 32px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
         <a href="/" style="display:flex;align-items:center;gap:11px;font-family:'Red Hat Display';font-weight:800;font-size:18px;letter-spacing:-.5px;"><img src="assets/img/logo-tompanos-v3.png" alt="Tom Panos" style="height:30px;width:auto;display:block;"></a>
-        <p style="font-size:13px;color:#5C6470;font-family:'Fira Code';margin:0;">© 2026 Tom Panos · Made with ♥ in Milwaukee, WI</p>
+        <p style="font-size:13px;color:#7B8693;font-family:'Fira Code';margin:0;">© 2026 Tom Panos · Made with ♥ in Milwaukee, WI</p>
       </div>
     </footer>
 

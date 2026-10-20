@@ -2,6 +2,15 @@
 (function () {
   function ready(fn){ document.readyState!=='loading' ? fn() : document.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
+    // Mobile nav toggle (the button only shows under 900px; see styles.css)
+    document.querySelectorAll('[data-navtoggle]').forEach(function (btn) {
+      var nav = btn.closest('nav');
+      function set(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+      btn.addEventListener('click', function () { set(!nav.classList.contains('open')); });
+      nav.querySelectorAll('div > a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+      document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') set(false); });
+    });
+
     // Scroll reveal (+ chart bar growth for [data-grow] children)
     var reveal = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

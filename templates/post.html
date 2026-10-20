@@ -34,11 +34,12 @@
     <a href="/" style="display:flex;align-items:center;gap:11px;font-family:'Red Hat Display';font-weight:800;font-size:19px;letter-spacing:-.5px;"><img src="/assets/img/logo-tompanos-v3.png" alt="Tom Panos" style="height:30px;width:auto;display:block;"></a>
     <div style="display:flex;align-items:center;gap:30px;">
       <a href="/" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">Home</a>
-      <a href="/projects" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">My Projects</a>
-      <a href="/mission" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">My Mission</a>
+      <a href="/projects" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">Projects</a>
+      <a href="/mission" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">Mission</a>
       <a href="/library" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">Software Library</a>
-      <a href="/blog" style="font-size:14.5px;color:#F3F5F8;font-weight:500;">My Blog</a>
-      <a href="https://s3labs.tech" target="_blank" style="font-size:14px;font-weight:600;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);padding:9px 18px;border-radius:10px;" class="hv2">S3 Labs <span style="font-family:'Fira Code';">↗</span></a>
+      <a href="/blog" style="font-size:14.5px;color:#F3F5F8;font-weight:500;">Blog</a>
+      <a href="https://s3labs.tech" target="_blank" style="font-size:14.5px;color:#99A1AD;font-weight:500;" class="hv1">S3 Labs <span style="font-family:'Fira Code';">↗</span></a>
+      <a href="/work" style="font-size:14px;font-weight:600;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);padding:9px 18px;border-radius:10px;" class="hv2">Work with me</a>
     </div>
     <button type="button" data-navtoggle aria-label="Menu" aria-expanded="false" style="display:none;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#F3F5F8;cursor:pointer;padding:0;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 4.5h14M2 9h14M2 13.5h14"/></svg></button>
   </nav>
@@ -56,6 +57,11 @@
       </div>
     </section>
 
+    <!-- COVER -->
+    <section style="max-width:900px;margin:0 auto;padding:0 32px 44px;">
+      <img src="{{cover}}" alt="{{coverAlt}}" style="animation:heroIn .7s cubic-bezier(.2,.7,.2,1) 120ms both;width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);">
+    </section>
+
     <!-- ARTICLE BODY -->
     <section style="max-width:900px;margin:0 auto;padding:0 32px 40px;">
       <article class="post-body">
@@ -63,10 +69,26 @@
       </article>
     </section>
 
-    <!-- BACK TO BLOG -->
+    <!-- AUTHOR -->
+    <section style="max-width:900px;margin:0 auto;padding:0 32px 64px;">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);border-top:1px solid rgba(255,255,255,.08);padding-top:36px;display:flex;gap:20px;align-items:flex-start;">
+        <img src="/assets/img/avatar.png" alt="Tom Panos" style="width:64px;height:64px;border-radius:50%;flex:none;background:#fff;display:block;">
+        <div>
+          <div style="font-family:'Red Hat Display';font-weight:800;font-size:18px;margin-bottom:6px;">Tom Panos</div>
+          <p style="font-size:15px;line-height:1.6;color:#B6BDC7;margin:0 0 18px;max-width:600px;">I spent 14 years in sales, marketing and consulting before I started building with AI. Now I help teams build it into the work they already do.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="/work" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);padding:11px 22px;border-radius:10px;" class="hv2">Work with me <span style="font-family:'Fira Code';">→</span></a>
+            <a href="/blog" style="display:inline-flex;align-items:center;font-size:14px;font-weight:600;color:#C3CAD3;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);padding:11px 22px;border-radius:10px;" class="hv4">All articles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
     <section style="max-width:900px;margin:0 auto;padding:0 32px 90px;">
-      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);border-top:1px solid rgba(255,255,255,.08);padding-top:36px;">
-        <a href="/blog" style="display:inline-block;font-size:14px;font-weight:600;color:#0B0C10;background:linear-gradient(135deg,#5C9BE8,#2E6BB0);padding:11px 22px;border-radius:10px;" class="hv2">← Back to all articles</a>
+      <h2 data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);font-family:'Red Hat Display';font-weight:800;font-size:26px;letter-spacing:-.6px;margin:0 0 24px;">Keep reading</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
+{{relatedPosts}}
       </div>
     </section>
 

@@ -16,7 +16,7 @@ Domain terms (Post, Category, Featured post, Card title, …) are defined in `GL
 
 ## Architecture
 
-**Pages** are top-level HTML files, one per route: `index.html` (`/`), `projects.html`, `mission.html`, `library.html`, `blog.html`. Every page is self-contained and links `/assets/css/styles.css` + `/assets/js/main.js` (the build appends a `?v=<content hash>` to both, because `/assets/*` is served with a one-year immutable cache).
+**Pages** are top-level HTML files, one per route: `index.html` (`/`), `projects.html`, `mission.html`, `library.html`, `blog.html`, `work.html` (`/work`). Every page is self-contained and links `/assets/css/styles.css` + `/assets/js/main.js` (the build appends a `?v=<content hash>` to both, because `/assets/*` is served with a one-year immutable cache).
 
 **The Post module** (`posts/`, `templates/post.html`, `build.mjs`) is the single source for everything blog-related:
 - `posts/<slug>.html` = one Post: a `---` front-matter block, then the body HTML (styled by `.post-body`). Fields: `title`, `date` (YYYY-MM-DD), `categories` (comma-separated keys), `description` (meta/OG + lede), `excerpt` (card teaser), `cover`; optional `cardTitle`, `coverAlt`, `ogImage`, `featured: true`. Values are plain text — the build HTML-escapes them. Reading time is computed from the body.

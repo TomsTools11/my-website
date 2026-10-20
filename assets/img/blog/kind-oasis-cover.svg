@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="18%" r="70%">
+      <stop offset="0" stop-color="#2E6BB0" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#0B0C10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5C9BE8"/>
+      <stop offset="1" stop-color="#2E6BB0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#0B0C10"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g font-family="'Red Hat Display','Helvetica Neue',Arial,sans-serif" fill="#F3F5F8">
+    <text x="110" y="190" font-family="'Fira Code',Menlo,monospace" font-size="30" letter-spacing="6" fill="#5C9BE8">CASE STUDY · KIND OASIS</text>
+    <text x="106" y="320" font-size="96" font-weight="900" letter-spacing="-3">An AI shopping assistant,</text>
+    <text x="106" y="430" font-size="96" font-weight="900" letter-spacing="-3" fill="url(#accent)">60 days in.</text>
+    <g font-weight="900" font-size="88" letter-spacing="-2">
+      <text x="110" y="660" fill="#5C9BE8">+83%</text>
+      <text x="610" y="660">28.6%</text>
+      <text x="1110" y="660">21.1%</text>
+    </g>
+    <g font-family="'Fira Code',Menlo,monospace" font-size="26" fill="#9BA3AD">
+      <text x="112" y="720">chatbot sales, month 2</text>
+      <text x="612" y="720">of chats added to cart</text>
+      <text x="1112" y="720">of chats became orders</text>
+    </g>
+  </g>
+  <rect x="110" y="790" width="1380" height="2" fill="#F3F5F8" fill-opacity=".1"/>
+</svg>

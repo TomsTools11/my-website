@@ -1,4 +1,4 @@
-/* tom-panos.com — interactivity (reveal, counters, chart bars, filters, search) */
+/* tom-panos.com — interactivity (reveal, counters, chart bars, filters, search, highlight toggles) */
 (function () {
   function ready(fn){ document.readyState!=='loading' ? fn() : document.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
@@ -74,6 +74,23 @@
         apply();
       });
       if (search) search.addEventListener('input', function (ev) { q = ev.target.value.trim().toLowerCase(); apply(); });
+    });
+
+    // Highlight toggles — [data-highlight] holds [data-hl="<group>"] buttons; elements whose
+    // data-hl-group (space-separated) lacks the active group are dimmed by styles.css. "all" resets.
+    document.querySelectorAll('[data-highlight]').forEach(function (box) {
+      var btns = box.querySelectorAll('[data-hl]');
+      box.addEventListener('click', function (ev) {
+        var btn = ev.target.closest('[data-hl]'); if (!btn) return;
+        box.setAttribute('data-hl-active', btn.getAttribute('data-hl'));
+        btns.forEach(function (b) {
+          var on = b === btn;
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          b.style.color = on ? '#F3F5F8' : '#99A1AD';
+          b.style.background = on ? 'rgba(92,155,232,.12)' : 'rgba(255,255,255,.03)';
+          b.style.borderColor = on ? 'rgba(92,155,232,.55)' : 'rgba(255,255,255,.14)';
+        });
+      });
     });
   });
 })();

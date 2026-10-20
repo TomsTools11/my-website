@@ -9,7 +9,7 @@ import crypto from 'node:crypto';
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const OUT = path.join(ROOT, 'dist');
 const SITE = 'https://tom-panos.com';
-const PAGES = ['index.html', 'projects.html', 'mission.html', 'library.html', 'blog.html'];
+const PAGES = ['index.html', 'projects.html', 'mission.html', 'library.html', 'blog.html', 'work.html'];
 const STATIC = ['assets', 'robots.txt'];
 
 // Category key (what data-cat / filters match on) -> display label. Button order = this order.
@@ -92,6 +92,22 @@ const latestCard = (p, i) => `
             </div>
           </a>`;
 
+// Two posts for "Keep reading": shared category first, then newest.
+const relatedTo = p => {
+  const others = posts.filter(o => o !== p);
+  const shared = others.filter(o => o.categories.some(c => p.categories.includes(c)));
+  return [...shared, ...others.filter(o => !shared.includes(o))].slice(0, 2);
+};
+
+const relatedCard = (p, i) => `
+          <a href="/blog/${p.slug}" data-reveal data-reveal-delay="${i * 120}" style="${REVEAL('.7s')},border-color .25s;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.02);" class="hv9">
+            <img src="${esc(p.cover)}" alt="${esc(p.coverAlt)}" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy">
+            <div style="padding:20px;">
+              <span style="${LABEL}">${esc(p.label)}</span>
+              <h3 style="font-family:'Red Hat Display';font-weight:700;font-size:18px;line-height:1.25;margin:11px 0 0;">${esc(p.cardTitle)}</h3>
+            </div>
+          </a>`;
+
 const featuredPost = p => `      <a href="/blog/${p.slug}" data-reveal style="${REVEAL('.7s')},border-color .25s;display:grid;grid-template-columns:1.1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.02);" class="hv14">
         <div style="padding:48px;display:flex;flex-direction:column;justify-content:center;">
           <span style="font-family:'Fira Code';font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#5C9BE8;">Featured · ${esc(p.label)}</span>
@@ -107,6 +123,7 @@ const filterButton = (key, label, on) => `          <button data-filter="${esc(k
 const postTemplate = read('templates/post.html');
 const postPage = p => postTemplate.replace(/\{\{(\w+)\}\}/g, (_, k) => {
   if (k === 'body') return p.body;
+  if (k === 'relatedPosts') return relatedTo(p).map(relatedCard).join('\n');
   if (k === 'date') return p.iso;
   if (k === 'categoryLabel') return esc(p.label);
   if (k === 'ogImage') return SITE + p.ogImage;
@@ -128,7 +145,7 @@ function fill(html, file, slots) {
 const xml = s => esc(s).replace(/'/g, '&apos;');
 const sitemap = () => `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${['/', '/projects', '/mission', '/library', '/blog'].map(u => `  <url><loc>${SITE}${u === '/' ? '/' : u}</loc></url>`).join('\n')}
+${['/', '/projects', '/mission', '/library', '/blog', '/work'].map(u => `  <url><loc>${SITE}${u === '/' ? '/' : u}</loc></url>`).join('\n')}
 ${posts.map(p => `  <url><loc>${p.url}</loc><lastmod>${p.iso}</lastmod></url>`).join('\n')}
 </urlset>
 `;

@@ -29,6 +29,10 @@ input::placeholder{color:#7B8693;}
 .hv13:hover{transform:translateY(-4px) !important;border-color:rgba(92,155,232,.4) !important;background:rgba(92,155,232,.05) !important}
 .hv14:hover{border-color:rgba(92,155,232,.4) !important}
 
+/* highlight toggles (main.js sets data-hl-active on the [data-highlight] box) */
+[data-hl-active="use"] [data-hl-group]:not([data-hl-group~="use"]),
+[data-hl-active="know"] [data-hl-group]:not([data-hl-group~="know"]){opacity:.22;}
+
 /* ---------- blog post pages ---------- */
 .post-body{max-width:740px;font-size:17px;line-height:1.75;color:#C6CDD6;}
 .post-body p{margin:0 0 22px;}
